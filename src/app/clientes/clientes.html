@@ -1,0 +1,44 @@
+<h2>Clientes</h2>
+
+<form (ngSubmit)="salvar()">
+  <div class="campo">
+    <input type="text" name="nome" placeholder=" " [(ngModel)]="novoCliente.nome" required>
+    <label>Nome</label>
+  </div>
+
+  <div class="campo">
+    <input type="text" name="telefone" placeholder=" " [(ngModel)]="novoCliente.telefone">
+    <label>Telefone</label>
+  </div>
+
+  <div class="campo">
+    <input type="text" name="endereco" placeholder=" " [(ngModel)]="novoCliente.endereco">
+    <label>Endereço</label>
+  </div>
+
+  <button type="submit">Cadastrar</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Endereço</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (c of clientes(); track c.id) {
+      <tr>
+        <td>{{ c.nome }}</td>
+        <td>{{ c.telefone }}</td>
+        <td>{{ c.endereco }}</td>
+        <td>
+          <button (click)="editar(c)">Editar</button>
+          <button (click)="excluir(c.id!)">Excluir</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

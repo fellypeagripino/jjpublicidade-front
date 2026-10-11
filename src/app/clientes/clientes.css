@@ -1,0 +1,105 @@
+:host {
+  display: block;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+h2 {
+  color: #1d4e89;
+  margin-bottom: 16px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  border: 1px solid #c9d6e8;
+  border-radius: 10px;
+  padding: 16px;
+  background: #f8fafd;
+}
+
+input {
+  flex: 1;
+  min-width: 160px;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #1d4e89;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #1d4e89;
+  color: white;
+  text-align: left;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover td {
+  background: #f3f6fa;
+}
+
+td button + button {
+  background: #c0392b;
+  margin-left: 6px;
+}
+
+.campo {
+  position: relative;
+  flex: 1;
+  min-width: 160px;
+}
+
+.campo input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 10px 6px;
+}
+
+.campo label {
+  position: absolute;
+  left: 11px;
+  top: 14px;
+  color: #777;
+  pointer-events: none;
+  transition: all 0.2s;
+}
+
+.campo input:focus + label,
+.campo input:not(:placeholder-shown) + label {
+  top: 4px;
+  font-size: 11px;
+  color: #1d4e89;
+}
+
+table {
+  border: 1px solid #c9d6e8;
+  border-radius: 10px;
+  overflow: hidden;
+}
