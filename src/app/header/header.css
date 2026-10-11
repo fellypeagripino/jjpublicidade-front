@@ -14,3 +14,13 @@ p {
   margin: 6px 0 0;
   opacity: 0.85;
 }
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
