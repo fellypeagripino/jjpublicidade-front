@@ -39,8 +39,11 @@ export class Clientes implements OnInit {
   }
 
   excluir(id: number) {
-    this.clienteService.deletar(id).subscribe(() => this.listar());
-  }
+  this.clienteService.deletar(id).subscribe({
+    next: () => this.listar(),
+    error: () => alert('Não foi possível excluir. Verifique se o cliente possui anúncios vinculados.'),
+  });
+}
 
   private depoisDeSalvar() {
     this.listar();
