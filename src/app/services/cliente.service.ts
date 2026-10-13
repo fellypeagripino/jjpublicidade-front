@@ -12,7 +12,7 @@ export class ClienteService {
     return this.http.get<Cliente[]>(this.apiUrl);
   }
 
-  buscarPorId(id: number): Observable<Cliente> {
+  buscarPorId(id: string): Observable<Cliente> {
     return this.http.get<Cliente>(`${this.apiUrl}/${id}`);
   }
 
@@ -20,11 +20,11 @@ export class ClienteService {
     return this.http.post<Cliente>(this.apiUrl, cliente);
   }
 
-  atualizar(id: number, cliente: Cliente): Observable<Cliente> {
+  atualizar(id: string, cliente: Cliente): Observable<Cliente> {
     return this.http.put<Cliente>(`${this.apiUrl}/${id}`, cliente);
   }
 
-  deletar(id: number): Observable<void> {
+  deletar(id: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }
